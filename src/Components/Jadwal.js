@@ -1,6 +1,9 @@
 import Table from 'react-bootstrap/Table';
+import React, { Component } from 'react'
+
 function BasicExample() {
     return (
+    
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -28,9 +31,14 @@ function BasicExample() {
             <td colSpan={2}>Larry the Bird</td>
             <td>@twitter</td>
           </tr>
+          <tr>
+          
+          </tr>
         </tbody>
+        <img src='https://i.ibb.co/j5BDRbS/hehe.jpg' className='h-100'></img>   
       </Table>
     );
+
   }
   
   export default BasicExample;
