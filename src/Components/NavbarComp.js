@@ -18,8 +18,17 @@ export default class NavbarComp extends Component {
             <Router>
                 <div>
 
-                    <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <Navbar.Brand href="#">New Shantika</Navbar.Brand>
+                    <Navbar bg="light" variant={"light"} expand="lg" fixed="top">
+            <Navbar.Brand href="#home">
+            <img
+              alt=""
+              src="https://i.pinimg.com/736x/2f/fc/b9/2ffcb91460d1d4b0d2ef8b3424b30779.jpg"
+              width="50"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+            New Shantika
+          </Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
