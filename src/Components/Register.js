@@ -71,9 +71,9 @@ const Register = () => {
 
       <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
         <div className="d-flex flex-column align-content-end">
-          <div className="auth-body mx-auto">
+          <div className="auth-body mx-auto square border rounded">
             <p>Create your Account</p>
-            <div className="auth-form-container text-start">
+            <div className="auth-form-container text-start">  
               <form
                 className="auth-form"
                 method="POST"
