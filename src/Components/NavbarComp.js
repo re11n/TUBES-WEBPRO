@@ -17,6 +17,7 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <Router>
+                
                 <div>
 
                     <Navbar bg="light" variant={"light"} expand="lg" fixed="top">
@@ -33,7 +34,7 @@ export default class NavbarComp extends Component {
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
-                                className="mr-auto my-2 my-lg-0"
+                                className="mr-left my-2 my-lg-0"
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
@@ -46,6 +47,7 @@ export default class NavbarComp extends Component {
                         </Navbar.Collapse>
                     </Navbar>
                 </div>
+
                 <div>
                     <Switch>
                         <Route path="/tiket">

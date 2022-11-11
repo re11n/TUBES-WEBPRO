@@ -3,10 +3,23 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
 import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Nav } from 'react-bootstrap';
+import About from './Aboutus';
+import CS from './CS';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function AutoLayoutExample() {
   return (
+    <Router>
     <Container>
     <Row>
         <Col>
@@ -80,7 +93,74 @@ function AutoLayoutExample() {
         </Figure>
         </Col>
       </Row> 
+      <Row>
+        <Col>
+        <Figure>
+        <Figure.Caption>
+            <h1>About Us!</h1>
+            <h7>PO. New Shantika didirikan pada bulan Maret 2003. Garasi utama New Shantika berada di Ngabul, Kabupaten Jepara, Provinsi Jawa Tengah. New Shantika melayani beberapa rute perjalanan seperti Jepara-Jakarta dengan armada yang menyediakan fasilitas lengkap demi menjaga kenyamanan penumpang saat melakukan perjalanan.</h7>
+            
+        </Figure.Caption>
+        
+        </Figure>
+        <Nav.Link as={Link} to="/aboutus"><Button variant="primary" >Cari Tahu lebih lanjut !</Button></Nav.Link>
+        </Col>
+        <Col>
+      <Figure>
+      <Image 
+            
+            src='https://www.newshantika.co.id/assets/img/ic-new-shantika_ilustrasi-bus-shantika.png' className='img-fluid shadow-4' ></Image>
+        </Figure>
+        </Col>
+      </Row>
+
+      <Row>
+       <Col>
+       
+        <ListGroup>
+      <ListGroup.Item>Cras justo odio</ListGroup.Item>
+      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+    </ListGroup>
+        </Col>
+
+        <Col>
+        <Figure>
+        <Image 
+             width={150}
+             height={200}
+            src= 'https://i1.wp.com/intraoralscanners.com/wp-content/uploads/2018/06/faq_icon_pic.png' className='img-fluid shadow-4' ></Image>
+          <Figure.Caption>
+        <h4>FAQ</h4>
+        </Figure.Caption>
+        </Figure>
+        </Col>
+      </Row>
+
+      <Row>
+        <Figure>
+          <Figure.Caption>
+          <h3> Masih Ada Pertanyaan Yang belum Terjawab?</h3>
+          </Figure.Caption>
+          <Nav.Link as={Link} to="/CS"><Button variant="primary" >Tanyakan Pada CS</Button></Nav.Link>
+        </Figure>
+        
+      </Row>
     </Container>
+    
+    <div>
+      <Switch>
+        <Route path="/aboutus">
+          <About/>
+        </Route>
+        <Route path="/CS">
+          <CS/>
+        </Route>
+      </Switch>
+    </div>
+    </Router>
   );
 }
 
