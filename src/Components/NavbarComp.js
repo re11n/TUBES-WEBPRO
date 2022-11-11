@@ -11,6 +11,7 @@ import Home from './Home';
 import Tiket from './Tiket';
 import Jadwal from './Jadwal';
 import Login from './Login';
+import Register from './Register';
 
 export default class NavbarComp extends Component {
     render() {
@@ -39,7 +40,7 @@ export default class NavbarComp extends Component {
                                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                                 <Nav.Link as={Link} to="/tiket">Tiket</Nav.Link>
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
-                                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                                <Nav.Link as={Link} to="/Login">Login</Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
@@ -56,6 +57,9 @@ export default class NavbarComp extends Component {
                         <Route path="/login">
                             <Login />
                         </Route>
+                        <Route path="/Register">
+                            <Register />
+                        </Route> 
                         <Route path="/">
                             <Home />
                         </Route>

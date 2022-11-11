@@ -2,17 +2,21 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Form from "./Forms";
 
-const Login = () => {
+const Register = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [remember, setRemember] = useState(false);
   const [validate, setValidate] = useState({});
   const [showPassword, setShowPassword] = useState(false);
 
-  const validateLogin = () => {
+  const validateRegister = () => {
     let isValid = true;
 
     let validator = Form.validator({
+      name: {
+        value: name,
+        isRequired: true,
+      },
       email: {
         value: email,
         isRequired: true,
@@ -35,16 +39,17 @@ const Login = () => {
     return isValid;
   };
 
-  const authenticate = (e) => {
+  const register = (e) => {
     e.preventDefault();
 
-    const validate = validateLogin();
+    const validate = validateRegister();
 
     if (validate) {
       setValidate({});
+      setName("");
       setEmail("");
       setPassword("");
-      alert("Successfully Login");
+      alert("Successfully Register User");
     }
   };
 
@@ -57,27 +62,52 @@ const Login = () => {
   };
 
   return (
-    
     <div className="row g-0 auth-wrapper">
       <div className="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
-      <img src="https://i.ibb.co/gRVpp5c/chuttersnap-O-bo-SKI5-ZFY-unsplash.jpg" className="h-100 col-12" alt="img-login"></img>
-        <div className="auth-background-holder">
-        </div>
-        <div className="auth-background-mask">
-        </div>
+      <img src="https://i.ibb.co/MBcDJ38/egor-litvinov-Rl-HI0c-CNTh-Y-unsplash.jpg" className="h-100 col-12" alt="img-reg"></img>
+        <div className="auth-background-holder"></div>
+        <div className="auth-background-mask"></div>
       </div>
 
       <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
         <div className="d-flex flex-column align-content-end">
           <div className="auth-body mx-auto square border rounded">
-            <p className="auth-txt">Login to your account</p>
-            <div className="auth-form-container text-start">
+            <p>Create your Account</p>
+            <div className="auth-form-container text-start">  
               <form
                 className="auth-form"
                 method="POST"
-                onSubmit={authenticate}
+                onSubmit={register}
                 autoComplete={"off"}
               >
+                <div className="name mb-3">
+                  <input
+                    type="text"
+                    className={`form-control ${
+                      validate.validate && validate.validate.name
+                        ? "is-invalid "
+                        : ""
+                    }`}
+                    id="name"
+                    name="name"
+                    value={name}
+                    placeholder="Name"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+
+                  <div
+                    className={`invalid-feedback text-start ${
+                      validate.validate && validate.validate.name
+                        ? "d-block"
+                        : "d-none"
+                    }`}
+                  >
+                    {validate.validate && validate.validate.name
+                      ? validate.validate.name[0]
+                      : ""}
+                  </div>
+                </div>
+
                 <div className="email mb-3">
                   <input
                     type="email"
@@ -146,44 +176,22 @@ const Login = () => {
                         : ""}
                     </div>
                   </div>
-
-                  <div className="extra mt-3 row justify-content-between">
-                    <div className="col-6">
-                      <div className="form-check">
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id="remember"
-                          checked={remember}
-                          onChange={(e) => setRemember(e.currentTarget.checked)}
-                        />
-                        <label className="form-check-label" htmlFor="remember">
-                          Remember me
-                        </label>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="forgot-password text-end">
-                        <Link to="/forgot-password">Forgot password?</Link>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div className="text-center">
                   <button
                     type="submit"
                     className="btn btn-primary w-100 theme-btn mx-auto"
                   >
-                    Log In
+                    Sign Up
                   </button>
                 </div>
               </form>
 
               <hr />
               <div className="auth-option text-center pt-2">
-                No Account?{" "}
-                <Link className="text-link" to="/register">
-                  Sign up{" "}
+                Have an account?{" "}
+                <Link className="text-link" to="/login">
+                  Sign in
                 </Link>
               </div>
             </div>
@@ -191,8 +199,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  
   );
 };
 
-export default Login;
+export default Register;

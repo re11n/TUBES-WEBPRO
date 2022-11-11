@@ -4,7 +4,7 @@ export default class Tiket extends Component {
     render() {
         return (
             <div>
-                <h2> Tiket disini ya</h2>
+                <h2>Tiket</h2>
             </div>
         )
     }
