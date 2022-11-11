@@ -17,10 +17,11 @@ export default class NavbarComp extends Component {
     render() {
         return (
             <Router>
+                
                 <div>
 
                     <Navbar bg="light" variant={"light"} expand="lg" fixed="top">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/home">
             <img
               alt=""
               src="https://i.pinimg.com/736x/2f/fc/b9/2ffcb91460d1d4b0d2ef8b3424b30779.jpg"
@@ -33,7 +34,7 @@ export default class NavbarComp extends Component {
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
-                                className="mr-auto my-2 my-lg-0"
+                                className="mr-left my-2 my-lg-0"
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
@@ -46,6 +47,7 @@ export default class NavbarComp extends Component {
                         </Navbar.Collapse>
                     </Navbar>
                 </div>
+
                 <div>
                     <Switch>
                         <Route path="/tiket">
