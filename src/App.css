@@ -41,7 +41,8 @@
 
 form{
   text-align: center;
-  margin: 40px;
+  
+  margin-top: 2cm;
 }
 
 .Slider{
@@ -68,3 +69,6 @@ Form{
   text-align: center;
 }
 
+table{
+  margin: 1cm;
+}
