@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {useEffect,useState } from 'react'
 import { Navbar,  Nav } from 'react-bootstrap'
 import {
     BrowserRouter as Router,
@@ -6,6 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Axios from "axios";
 
 
 import Home from './Home';
@@ -14,10 +15,19 @@ import Jadwal from './Jadwal';
 import Login from './Login';
 import Register from './Register';
 
+const NavbarComp = () => {
+    const [loginStatus, setLoginStatus] = useState("");
 
-
-export default class NavbarComp extends Component {
-    render() {
+    useEffect(() => {
+        Axios.get("http://localhost:3001/login").then((response) => { 
+          // eslint-disable-next-line
+          if (response.data.LoggedIn == true){
+            setLoginStatus(response.data.user[0].nama)
+          } else {
+            setLoginStatus("Login")
+          }
+        })
+      }, []);
         return (
             <Router>
                 
@@ -44,7 +54,10 @@ export default class NavbarComp extends Component {
                                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                                 <Nav.Link as={Link} to="/tiket">Tiket</Nav.Link>
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
-                                <Nav.Link as={Link} to="/Login">Login</Nav.Link>
+                                <Nav.Link as={Link} to="/About">About Us</Nav.Link>
+                                <Nav.Link as={Link} to="/Bantuan">Bantuan</Nav.Link>
+                                
+                                <Nav.Link as={Link} to="/Login">{loginStatus}</Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
@@ -73,4 +86,4 @@ export default class NavbarComp extends Component {
             </Router>
         )
     }
-}
+export default NavbarComp;
