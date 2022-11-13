@@ -9,7 +9,7 @@ const Login = () => {
   const [remember, setRemember] = useState(false);
   const [validate, setValidate] = useState({});
   const [showPassword, setShowPassword] = useState(false);
-
+// eslint-disable-next-line
   const [loginStatus, setLoginStatus] = useState("");
 
   Axios.defaults.withCredentials = true;
@@ -24,6 +24,7 @@ const Login = () => {
       } else {
         setLoginStatus(response.data[0].nama)
         alert("Successfully Login");
+        window.location.reload(false);
       }
     });
   }
@@ -101,7 +102,6 @@ const Login = () => {
         <div className="d-flex flex-column align-content-end">
           <div className="auth-body mx-auto square border rounded">
             <img src="https://i.ibb.co/bgYPLT3/pngwing-com.png" width="70px" height="70px" className="profile" alt="profile-login"></img>
-            <h1> {loginStatus}</h1>
             <p className="auth-txt">Login to your account</p>
             <div className="auth-form-container text-start">
               <form
