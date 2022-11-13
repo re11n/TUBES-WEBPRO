@@ -78,7 +78,8 @@ const Login = () => {
   };
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/login").then((response) => {
+    Axios.get("http://localhost:3001/login").then((response) => { 
+      // eslint-disable-next-line
       if (response.data.LoggedIn == true){
         setLoginStatus(response.data.user[0].nama)
       }
