@@ -4,9 +4,7 @@ import Formulir from './Formulir';
 function Jadwal() {
     const Jadwal= {
       color: "white",
-      backgroundColor: "DodgerBlue",
       padding: "60px",
-      fontFamily: "Sans-Serif"
     };
 
     return (

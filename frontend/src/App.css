@@ -39,11 +39,7 @@
   }
 }
 
-form{
-  text-align: center;
-  
-  margin-top: 2cm;
-}
+
 
 .Slider{
   margin-bottom: 2cm;
@@ -52,7 +48,7 @@ form{
 Form{
   text-align: center;
   margin: 24px;
-  margin-top: 2cm;
+  margin-top: 40px;
 }
 
 .figure{

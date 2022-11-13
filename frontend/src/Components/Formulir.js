@@ -22,7 +22,7 @@ function Formulir() {
         </Col>
       </Row>
     </Form>
-    <Button variant="light" >Cari Tiket !</Button>
+    <Button variant="primary" >Cari Tiket !</Button>
         </>
     );
 }
