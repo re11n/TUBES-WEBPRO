@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Figure from 'react-bootstrap/Figure';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { Nav } from 'react-bootstrap';
 import About from './Aboutus';
 import CS from './CS';
@@ -115,37 +114,22 @@ function AutoLayoutExample() {
       </Row>
 
       <Row>
-       <Col>
-       
-        <ListGroup>
-      <ListGroup.Item>Cras justo odio</ListGroup.Item>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-    </ListGroup>
-        </Col>
 
         <Col>
         <Figure>
         <Image 
-             width={150}
-             height={200}
+             width={300}
+             height={400}
             src= 'https://i1.wp.com/intraoralscanners.com/wp-content/uploads/2018/06/faq_icon_pic.png' className='img-fluid shadow-4' ></Image>
           <Figure.Caption>
         <h4>FAQ</h4>
+        <Nav.Link as={Link} to="/CS"><Button variant="primary" >Lihat FAQ </Button></Nav.Link>
         </Figure.Caption>
         </Figure>
         </Col>
       </Row>
 
       <Row>
-        <Figure>
-          <Figure.Caption>
-          <h3> Masih Ada Pertanyaan Yang belum Terjawab?</h3>
-          </Figure.Caption>
-          <Nav.Link as={Link} to="/CS"><Button variant="primary" >Tanyakan Pada CS</Button></Nav.Link>
-        </Figure>
         
       </Row>
     </Container>
