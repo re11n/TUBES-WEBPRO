@@ -20,12 +20,12 @@ const Login = () => {
     }).then((response) =>{
 
       if (response.data.message){
-        setLoginStatus(response.data.message)
+        alert("Email/Password salah")
       } else {
         setLoginStatus(response.data[0].nama)
+        alert("Successfully Login");
       }
     });
-    alert("Successfully Login");
   }
 
 
@@ -100,7 +100,7 @@ const Login = () => {
       <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
         <div className="d-flex flex-column align-content-end">
           <div className="auth-body mx-auto square border rounded">
-            <img src="https://i.ibb.co/bgYPLT3/pngwing-com.png" width="70px" height="70px" className="profile "></img>
+            <img src="https://i.ibb.co/bgYPLT3/pngwing-com.png" width="70px" height="70px" className="profile" alt="profile-login"></img>
             <h1> {loginStatus}</h1>
             <p className="auth-txt">Login to your account</p>
             <div className="auth-form-container text-start">
