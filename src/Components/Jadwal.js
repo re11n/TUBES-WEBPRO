@@ -1,14 +1,22 @@
 
-import FormJadwal from './FormJadwal';
+import Formulir from './Formulir';
 
 function Jadwal() {
+    const Jadwal= {
+      color: "white",
+      backgroundColor: "DodgerBlue",
+      padding: "60px",
+      fontFamily: "Sans-Serif"
+    };
+
     return (
    <>
-   <h1>Beli Tiket Bus Online Untuk Bepergian ke Rute Favorit Anda</h1>
-    <FormJadwal/>
+   <h1 style={Jadwal}>Lihat jadwal bus keberangkatan/tiba anda disini</h1>
+    <Formulir/>
     </>
     );
 
   }
-  
+
+
   export default Jadwal;
