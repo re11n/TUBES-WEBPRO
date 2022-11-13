@@ -14,6 +14,8 @@ import Jadwal from './Jadwal';
 import Login from './Login';
 import Register from './Register';
 
+
+
 export default class NavbarComp extends Component {
     render() {
         return (

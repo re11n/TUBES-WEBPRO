@@ -84,7 +84,8 @@ const Register = () => {
       <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
         <div className="d-flex flex-column align-content-end">
           <div className="auth-body mx-auto square border rounded">
-            <p>Create your Account</p>
+          <img src="https://i.ibb.co/bgYPLT3/pngwing-com.png" width="70px" height="70px" className="profile"></img>
+            <p className="regtext">Create your Account</p>
             <div className="auth-form-container text-start">  
               <form
                 className="auth-form"
