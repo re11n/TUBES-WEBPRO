@@ -129,9 +129,6 @@ function AutoLayoutExample() {
         </Col>
       </Row>
 
-      <Row>
-        
-      </Row>
     </Container>
     
     <div>
