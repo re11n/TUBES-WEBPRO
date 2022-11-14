@@ -1,5 +1,6 @@
 
 import FormJadwal from './FormJadwal';
+import Footer from './Footer';
 
 function Jadwal() {
     const Jadwal= {
@@ -11,6 +12,7 @@ function Jadwal() {
    <>
    <h1 style={Jadwal}>Lihat jadwal bus keberangkatan/tiba anda disini</h1>
     <FormJadwal/>
+    <Footer/>
     </>
     );
 
