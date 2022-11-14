@@ -14,6 +14,8 @@ import Tiket from './Tiket';
 import Jadwal from './Jadwal';
 import Login from './Login';
 import Register from './Register';
+import Aboutus from './Aboutus';
+import CS from './CS';
 
 const NavbarComp = () => {
     const [loginStatus, setLoginStatus] = useState("");
@@ -28,6 +30,7 @@ const NavbarComp = () => {
           }
         })
       }, []);
+// eslint-disable-next-line
       if ({loginStatus} == "Login"){
         return (
             <Router>
@@ -55,8 +58,8 @@ const NavbarComp = () => {
                                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                                 <Nav.Link as={Link} to="/tiket">Tiket</Nav.Link>
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
-                                <Nav.Link as={Link} to="/About">About Us</Nav.Link>
-                                <Nav.Link as={Link} to="/Bantuan">Bantuan</Nav.Link>
+                                <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                                <Nav.Link as={Link} to="/bantuan">Bantuan</Nav.Link>
                                 <Nav.Link as={Link} to="/Login">Login</Nav.Link>
                             </Nav>
 
@@ -112,8 +115,8 @@ const NavbarComp = () => {
                                 <Nav.Link as={Link} to="/home">Home</Nav.Link>
                                 <Nav.Link as={Link} to="/tiket">Tiket</Nav.Link>
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
-                                <Nav.Link as={Link} to="/About">About Us</Nav.Link>
-                                <Nav.Link as={Link} to="/Bantuan">Bantuan</Nav.Link>
+                                <Nav.Link as={Link} to="/about">About Us</Nav.Link>
+                                <Nav.Link as={Link} to="/bantuan">Bantuan</Nav.Link>
                                 
                                 <Nav.Link as={Link} to="/login">{loginStatus}</Nav.Link>
                             </Nav>
@@ -135,6 +138,12 @@ const NavbarComp = () => {
                         </Route>
                         <Route path="/Register">
                             <Register />
+                        </Route> 
+                        <Route path="/about">
+                            <Aboutus />
+                        </Route> 
+                        <Route path="/bantuan">
+                            <CS />
                         </Route> 
                         <Route path="/">
                             <Home />

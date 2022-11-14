@@ -97,7 +97,7 @@ function AutoLayoutExample() {
         <Figure>
         <Figure.Caption>
             <h1>About Us!</h1>
-            <h7>PO. New Shantika didirikan pada bulan Maret 2003. Garasi utama New Shantika berada di Ngabul, Kabupaten Jepara, Provinsi Jawa Tengah. New Shantika melayani beberapa rute perjalanan seperti Jepara-Jakarta dengan armada yang menyediakan fasilitas lengkap demi menjaga kenyamanan penumpang saat melakukan perjalanan.</h7>
+            <h4>PO. New Shantika didirikan pada bulan Maret 2003.</h4>
             
         </Figure.Caption>
         

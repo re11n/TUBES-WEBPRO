@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Formulir from './Formulir';
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
