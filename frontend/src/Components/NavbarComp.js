@@ -17,21 +17,36 @@ import Register from './Register';
 import Aboutus from './Aboutus';
 import CS from './CS';
 
+
+
+
 const NavbarComp = () => {
     const [loginStatus, setLoginStatus] = useState("");
+
+    const [x, setx] = useState(true);
+
+    const clearCacheData = () => {
+        caches.keys().then((userID) => {
+          userID.forEach((userID) => {
+            caches.delete(userID);
+          });
+        });
+        alert('Complete Cache Cleared')
+      };
 
     useEffect(() => {
         Axios.get("http://localhost:3001/login").then((response) => { 
           // eslint-disable-next-line
           if (response.data.LoggedIn == true){
             setLoginStatus(response.data.user[0].nama)
+            setx(false);
           } else {
-            setLoginStatus("Login")
+            setx(true);
           }
         })
       }, []);
 // eslint-disable-next-line
-      if ({loginStatus} == "Login"){
+      if (x == true){
         return (
             <Router>
                 
@@ -117,8 +132,8 @@ const NavbarComp = () => {
                                 <Nav.Link as={Link} to="/jadwal">Jadwal</Nav.Link>
                                 <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                                 <Nav.Link as={Link} to="/bantuan">Bantuan</Nav.Link>
-                                
                                 <Nav.Link as={Link} to="/login">{loginStatus}</Nav.Link>
+                                <Nav.Link as={Link}><button onClick={() => clearCacheData()}>Logout</button></Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
