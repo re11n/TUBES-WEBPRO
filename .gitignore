@@ -23,6 +23,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+frontend/package-lock.json
 frontend/node_modules/.bin/acorn
 frontend/node_modules/.bin/acorn.cmd
 frontend/node_modules/.bin/acorn.ps1
