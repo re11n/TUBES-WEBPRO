@@ -43,29 +43,30 @@ function Formulir() {
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>No</th>
+          <th>Kota Keberangkatan</th>
+          <th>Kota Tujuan</th>
+          <th>Jam Berangkat</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Bandung</td>
+          <td>Jakarta</td>
+          <td>06.00</td>
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Bandung</td>
+          <td>Jakarta</td>
+          <td>09.00</td>
         </tr>
         <tr>
           <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Bandung</td>
+          <td>Jakarta</td>
+          <td>12.00</td>
         </tr>
       </tbody>
     </Table>
