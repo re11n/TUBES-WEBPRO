@@ -1,5 +1,5 @@
 
-import Formulir from './Formulir';
+import FormJadwal from './FormJadwal';
 
 function Jadwal() {
     const Jadwal= {
@@ -10,7 +10,7 @@ function Jadwal() {
     return (
    <>
    <h1 style={Jadwal}>Lihat jadwal bus keberangkatan/tiba anda disini</h1>
-    <Formulir/>
+    <FormJadwal/>
     </>
     );
 
