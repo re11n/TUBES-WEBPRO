@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #abd1db;
+  background-color: #50bfdb;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -56,8 +56,8 @@ Form{
   text-align: center;
 }
 
-.card-group{
-  margin: 50px;
+.card{
+  margin: 20px;
 }
 
 .row{
@@ -67,4 +67,19 @@ Form{
 
 table{
   margin: 1cm;
+}
+
+.text-center{
+  margin-left: 4cm;
+  margin-right: 4cm;
+}
+
+.tiket{
+  margin-left: 4cm;
+  margin-right: 4cm;
+  text-align: left;
+}
+
+.AboutUs{
+  margin-top: 60px;
 }

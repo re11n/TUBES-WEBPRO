@@ -10,7 +10,6 @@ export default class Home extends Component {
         return (
         <div>
             <Slider/>
-            <h1>Mau Pergi Kemana?</h1>
             <Formulir/>
             <h3>Berikut adalah trayek andalan kami</h3>
             <Card/>
