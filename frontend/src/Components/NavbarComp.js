@@ -115,7 +115,7 @@ const NavbarComp = () => {
                                 <Nav.Link as={Link} to="/About">About Us</Nav.Link>
                                 <Nav.Link as={Link} to="/Bantuan">Bantuan</Nav.Link>
                                 
-                                <Nav.Link as={Link} to="/home">{loginStatus}</Nav.Link>
+                                <Nav.Link as={Link} to="/login">{loginStatus}</Nav.Link>
                             </Nav>
 
                         </Navbar.Collapse>
