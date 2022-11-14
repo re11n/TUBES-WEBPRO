@@ -84,7 +84,7 @@ const NavbarComp = () => {
 
                 <div>
                     <Switch>
-                        <Route path="/tiket">
+                    <Route path="/tiket">
                             <Tiket />
                         </Route>
                         <Route path="/jadwal">
@@ -95,6 +95,12 @@ const NavbarComp = () => {
                         </Route>
                         <Route path="/Register">
                             <Register />
+                        </Route> 
+                        <Route path="/about">
+                            <Aboutus />
+                        </Route> 
+                        <Route path="/bantuan">
+                            <CS />
                         </Route> 
                         <Route path="/">
                             <Home />
