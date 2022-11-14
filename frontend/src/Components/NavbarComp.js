@@ -30,6 +30,7 @@ const NavbarComp = () => {
           }
         })
       }, []);
+// eslint-disable-next-line
       if ({loginStatus} == "Login"){
         return (
             <Router>
