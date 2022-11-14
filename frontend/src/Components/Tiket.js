@@ -1,5 +1,5 @@
 import React from 'react'
-import Formulir from './Formulir';
+
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 import Footer from './Footer';
@@ -11,7 +11,7 @@ function Tiket(){
         return (
 
             <div className='FormTiket' style={tiket}>
-                <Formulir/>
+                
                 <Card className='tiket'>
                     <Card.Body>Berikut adalah tiket yang tersedia:</Card.Body>
                 </Card>

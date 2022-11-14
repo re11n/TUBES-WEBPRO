@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Footer from './Footer';
 
 
 function Aboutus() {
@@ -114,18 +115,18 @@ function Aboutus() {
       <Card.Img 
       width={120}
       height={120}
-      variant="top" src='https://awsimages.detik.net.id/community/media/visual/2021/02/04/wakil-presiden-maruf-amin_43.jpeg?w=700&q=90' />
+      variant="top" src='https://storage.nu.or.id/storage/post/16_9/big/preemptive-solutions_1663814694.webp' />
       <Card.Body>
         <Card.Title>daws</Card.Title>
         <Card.Text>
-          diam tak bergerak bergerak tak diam
+          awikwiakwiaksiawksiawkiasiwk
           </Card.Text>
      </Card.Body>
      </Card>
      </Col>
     </Row>
     
-    
+    <Footer/>
       </div>
       
     
