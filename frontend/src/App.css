@@ -60,6 +60,10 @@ Form{
   margin: 20px;
 }
 
+.card-group{
+  margin: 50px;
+}
+
 .row{
   text-decoration: solid;
   text-align: center;
@@ -69,7 +73,10 @@ table{
   margin: 1cm;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbef60b88f0711c2f6877caed2a7e369dc0d3265
 
 .tiket{
   margin-left: 4cm;
